@@ -24,5 +24,9 @@ public class InterfaceMainShape {
 	    e.prints();
 	    f.printed();
 	    g.print();
+        Welcome obj = new Welcome();
+        obj.sayHello("Omaima");
+        obj.sayGoodbye();      
+        Greeting.Greet();
 	}
 }
