@@ -72,6 +72,7 @@ public class HashTable {
         prev=temp;
         temp=temp.next;
     }
+    System.out.println("Key not found");
 }
 
     public void print(){
