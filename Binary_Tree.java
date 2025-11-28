@@ -66,7 +66,6 @@ public class Binary_Tree{
         root = removeRec(root, key);
     }
 
-
     private Node removeRec(Node root,int key){
         if(root == null) 
             return root;
@@ -95,6 +94,25 @@ public class Binary_Tree{
         return min;
     }   
 
+    public boolean search(int key){
+        return searchRec(root, key);
+    }
+    
+    private boolean searchRec(Node root, int key){
+        if(root == null){
+            return false;
+        }
+        if(root.data == key){
+            return true;
+        }
+        if(key<root.data){
+            return searchRec(root.left, key);
+        }
+        else{
+             return searchRec(root.right, key);
+        }
+    }
+
     private class Node{
         int data;
         Node left, right;
@@ -122,5 +140,7 @@ public class Binary_Tree{
         a.remove(60);
         System.out.println("After Deletion");
         a.inorder();
+        System.out.println("Searching for 40: "+a.search(40));
+        System.out.println("Searching for 90: "+a.search(90));
     }
 }
