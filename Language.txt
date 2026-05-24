@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class LoveLanguage {
+    public static void main(String[]args) {
+        Scanner sc=new Scanner(System.in);
+        int score=0;
+
+        System.out.println("💕 What’s Your Love Language?");
+        System.out.println("Answer with 1, 2, or 3\n");
+
+        System.out.println("1. What makes you happiest?");
+        System.out.println("1) Warm hugs");
+        System.out.println("2) Sweet words");
+        System.out.println("3) Thoughtful gifts");
+        score+=sc.nextInt();
+
+        System.out.println("\n2. You feel most loved when...");
+        System.out.println("1) Someone helps you out");
+        System.out.println("2) You're praised");
+        System.out.println("3) You're given time");
+        score+=sc.nextInt();
+
+        System.out.println("\n3. Best date idea?");
+        System.out.println("1) Quality time together");
+        System.out.println("2) A handwritten note");
+        System.out.println("3) Surprise snack delivery");
+        score+=sc.nextInt();
+
+        System.out.println("\n❤️ Result:");
+
+        if(score<=5) {
+            System.out.println("🕰️ Quality Time is your love language!");
+        } else if(score<=7) {
+            System.out.println("💬 Words of Affirmation show you care!");
+        } else {
+            System.out.println("🎁 Gifts and gestures speak for you!");
+        }
+
+        sc.close();
+    }
+}
